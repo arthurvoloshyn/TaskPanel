@@ -31,7 +31,7 @@ class ArtworksList extends Component {
           <div
             className={styles['artwork-avatar']}
             style={{
-              backgroundImage: `url(/imgs/artworks/${_id}.jpg)`
+              backgroundImage: `url(imgs/artworks/${_id}.jpg)`
             }}
           />
           <span>{`${title}`}</span>

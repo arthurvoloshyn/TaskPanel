@@ -31,7 +31,7 @@ class Dashboard extends Component {
           <div
             className={styles['artist-avatar']}
             style={{
-              backgroundImage: `url(/imgs/artists/${_id}.png)`
+              backgroundImage: `url(imgs/artists/${_id}.png)`
             }}
           />
           <span>{`${firstName} ${lastName}`}</span>

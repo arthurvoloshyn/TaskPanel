@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <HashRouter basename="TaskPanel">
+        <HashRouter>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/notes" component={NotesPage} />
