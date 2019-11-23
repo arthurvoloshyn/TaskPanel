@@ -1,0 +1,38 @@
+.note-list {
+  list-style: none;
+}
+
+.note-list li {
+  position: relative;
+}
+
+.note-list li .add-note {
+  opacity: 0;
+}
+
+.note-list li:hover .add-note {
+  opacity: 1;
+}
+
+.note-list-item {
+  position: relative;
+  display: block;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+  max-width: 400px;
+  border-left: 2px solid #adb9b9;
+  z-index: 1;
+}
+
+.add-note {
+  display: block;
+  height: 28px;
+  background: #f7f8f8;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  outline: none;
+  z-index: 0;
+}

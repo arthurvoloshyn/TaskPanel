@@ -1,0 +1,66 @@
+.dashboard {
+  display: flex;
+}
+
+.dashboard > * {
+  flex: 1;
+}
+
+.header {
+  font-weight: normal;
+  font-size: 17px;
+  margin-left: 1.1rem;
+  color: #8d8d8d;
+}
+
+.artist-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e3e9e8;
+  padding: 0.3rem 0.5rem;
+  height: 4rem;
+  font-size: 1.1rem;
+  background-color: white;
+  text-Decoration: none;
+  color: black;
+}
+
+.active-artist-row {
+  background-color: #f6fafb;
+  background-image: linear-gradient(108deg, rgb(235, 244, 244) 50%, rgb(251, 253, 253) 45%, rgb(255, 255, 255) 85%, rgb(255, 255, 255) 100%);
+  cursor: default;
+}
+
+.artist-avatar {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.6rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.spotlight {
+  padding-top: 105px;
+  box-sizing: border-box;
+  height: 400px;
+  width: 460px;
+  margin-left: auto;
+  background-image:
+    "linear-gradient(288deg, rgb(235, 244, 244) 50%, rgb(251, 253, 253) 45%, rgb(255, 255, 255) 85%, rgb(255, 255, 255) 100%)";
+}
+
+.spotlight-img {
+  height: 9rem;
+  width: 9rem;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.spotlight-label {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 25px;
+}
