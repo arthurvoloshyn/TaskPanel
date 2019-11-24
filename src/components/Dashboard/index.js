@@ -50,8 +50,8 @@ class Dashboard extends Component {
       artist => artist._id === selectedArtistId
     );
     const { firstName, lastName, _id } = artistInSpotlight;
-    const label = `${firstName} ${lastName
-    }`;
+    const label = `${firstName} ${lastName}`;
+
     const imgUrl = `imgs/artists/${_id}.png`;
 
     return (
