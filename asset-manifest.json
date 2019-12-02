@@ -1,13 +1,13 @@
 {
   "main.css": "/TaskPanel/static/css/main.5497a557.chunk.css",
-  "main.js": "/TaskPanel/static/js/main.b9159a4e.chunk.js",
-  "main.js.map": "/TaskPanel/static/js/main.b9159a4e.chunk.js.map",
-  "static/js/1.3cf1e0a1.chunk.js": "/TaskPanel/static/js/1.3cf1e0a1.chunk.js",
-  "static/js/1.3cf1e0a1.chunk.js.map": "/TaskPanel/static/js/1.3cf1e0a1.chunk.js.map",
+  "main.js": "/TaskPanel/static/js/main.359b10a8.chunk.js",
+  "main.js.map": "/TaskPanel/static/js/main.359b10a8.chunk.js.map",
+  "static/js/1.afe5675f.chunk.js": "/TaskPanel/static/js/1.afe5675f.chunk.js",
+  "static/js/1.afe5675f.chunk.js.map": "/TaskPanel/static/js/1.afe5675f.chunk.js.map",
   "runtime~main.js": "/TaskPanel/static/js/runtime~main.83a36643.js",
   "runtime~main.js.map": "/TaskPanel/static/js/runtime~main.83a36643.js.map",
   "static/css/main.5497a557.chunk.css.map": "/TaskPanel/static/css/main.5497a557.chunk.css.map",
   "index.html": "/TaskPanel/index.html",
-  "precache-manifest.aa2ebea278699574bd16e0ccd7f55822.js": "/TaskPanel/precache-manifest.aa2ebea278699574bd16e0ccd7f55822.js",
+  "precache-manifest.e1a2b6758cb59fcc24c81292afa5de26.js": "/TaskPanel/precache-manifest.e1a2b6758cb59fcc24c81292afa5de26.js",
   "service-worker.js": "/TaskPanel/service-worker.js"
 }
