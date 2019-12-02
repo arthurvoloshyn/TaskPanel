@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router";
 import { Provider } from "react-redux";
-import { HashRouter } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import configureStore from "./redux/store/configureStore";
 
 import HomePage from "./components/Pages/Home";
@@ -15,14 +15,14 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <HashRouter>
+        <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/notes" component={NotesPage} />
             <Route path="/artists/:artistId*" component={ArtistsPage} />
             <Route path="/artworks/:artworkId*" component={ArtworksPage} />
           </Switch>
-        </HashRouter>
+        </Router>
       </Provider>
     );
   }
