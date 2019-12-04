@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/TaskPanel/static/css/main.5497a557.chunk.css"
   },
   {
-    "revision": "e137b815d1fa085c5be0aba22ade817c",
+    "revision": "8d967817e186a1f1099df61c8d3f5892",
     "url": "/TaskPanel/index.html"
   }
 ];
