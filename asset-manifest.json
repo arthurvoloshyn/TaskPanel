@@ -1,13 +1,13 @@
 {
-  "main.css": "/TaskPanel/static/css/main.5497a557.chunk.css",
-  "main.js": "/TaskPanel/static/js/main.29e83527.chunk.js",
-  "main.js.map": "/TaskPanel/static/js/main.29e83527.chunk.js.map",
-  "static/js/1.3cf1e0a1.chunk.js": "/TaskPanel/static/js/1.3cf1e0a1.chunk.js",
-  "static/js/1.3cf1e0a1.chunk.js.map": "/TaskPanel/static/js/1.3cf1e0a1.chunk.js.map",
-  "runtime~main.js": "/TaskPanel/static/js/runtime~main.83a36643.js",
-  "runtime~main.js.map": "/TaskPanel/static/js/runtime~main.83a36643.js.map",
-  "static/css/main.5497a557.chunk.css.map": "/TaskPanel/static/css/main.5497a557.chunk.css.map",
+  "main.css": "/TaskPanel/static/css/main.64c1d6df.chunk.css",
+  "main.js": "/TaskPanel/static/js/main.ec3a98af.chunk.js",
+  "main.js.map": "/TaskPanel/static/js/main.ec3a98af.chunk.js.map",
+  "runtime~main.js": "/TaskPanel/static/js/runtime~main.f7852c42.js",
+  "runtime~main.js.map": "/TaskPanel/static/js/runtime~main.f7852c42.js.map",
+  "static/js/2.6f2ae8d2.chunk.js": "/TaskPanel/static/js/2.6f2ae8d2.chunk.js",
+  "static/js/2.6f2ae8d2.chunk.js.map": "/TaskPanel/static/js/2.6f2ae8d2.chunk.js.map",
   "index.html": "/TaskPanel/index.html",
-  "precache-manifest.9a834758fc7623f75054e209bdcf47b9.js": "/TaskPanel/precache-manifest.9a834758fc7623f75054e209bdcf47b9.js",
-  "service-worker.js": "/TaskPanel/service-worker.js"
+  "precache-manifest.c40b27161c75d53f8bec8c2c030e8fb1.js": "/TaskPanel/precache-manifest.c40b27161c75d53f8bec8c2c030e8fb1.js",
+  "service-worker.js": "/TaskPanel/service-worker.js",
+  "static/css/main.64c1d6df.chunk.css.map": "/TaskPanel/static/css/main.64c1d6df.chunk.css.map"
 }
