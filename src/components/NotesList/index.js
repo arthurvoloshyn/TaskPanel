@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { addNote } from "../../redux/actions/notes";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import styles from "./styles.module.css";
+import { addNote } from '../../redux/actions/notes';
+import Button from '../Button';
 
-const enhance = connect(
-  ({ notes }) => ({ notes }),
-  { addNote }
-);
+import styles from './styles.module.css';
+
+const enhance = connect(({ notes }) => ({ notes }), { addNote });
 
 class NotesList extends Component {
   render() {
@@ -18,7 +18,7 @@ class NotesList extends Component {
     }
 
     return (
-      <ul className={styles["note-list"]}>
+      <ul className={styles['note-list']}>
         {notes.map((note, index) => {
           return (
             <li key={index}>
@@ -31,23 +31,23 @@ class NotesList extends Component {
     );
   }
 
-  renderNote = note => <div className={styles["note-list-item"]}>{note}</div>;
+  renderNote = note => <div className={styles['note-list-item']}>{note}</div>;
 
   renderAddButton = (index = 0) => (
-    <button
-      data-index={index}
-      className={styles["add-note"]}
-      onClick={this.onAddButtonClick}
-    >
+    <Button data-index={index} className={styles['add-note']} onClick={this.onAddButtonClick}>
       + add note
-    </button>
+    </Button>
   );
 
-  onAddButtonClick = e => {
-    const text = window.prompt("Note text:");
+  onAddButtonClick = ({
+    target: {
+      dataset: { index }
+    }
+  }) => {
+    const text = window.prompt('Note text:');
 
     if (text) {
-      this.props.addNote(text, e.target.dataset.index - 1);
+      this.props.addNote(text, index - 1);
     } else if (text === '') {
       alert('Error! Note has no name.');
     } else {
@@ -55,5 +55,15 @@ class NotesList extends Component {
     }
   };
 }
+
+NotesList.propTypes = {
+  notes: PropTypes.array,
+  addNote: PropTypes.func
+};
+
+NotesList.defaultProps = {
+  notes: [],
+  addNote: () => {}
+};
 
 export default enhance(NotesList);

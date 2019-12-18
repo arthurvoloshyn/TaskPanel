@@ -2,6 +2,12 @@
   list-style: none;
 }
 
+@media (max-width: 490px) {
+  .note-list {
+    margin-right: 40px;
+  }
+}
+
 .note-list li {
   position: relative;
 }
@@ -15,24 +21,31 @@
 }
 
 .note-list-item {
-  position: relative;
-  display: block;
-  padding: 20px 15px;
-  box-sizing: border-box;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
-  max-width: 400px;
   border-left: 2px solid #adb9b9;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+  box-sizing: border-box;
+  display: block;
+  max-width: 400px;
+  padding: 20px 15px;
+  position: relative;
+  word-break: break-word;
   z-index: 1;
 }
 
+@media (max-width: 490px) {
+  .note-list-item {
+    max-width: 100%;
+  }
+}
+
 .add-note {
-  display: block;
-  height: 28px;
   background: #f7f8f8;
   border: none;
-  width: 100%;
-  max-width: 400px;
   cursor: pointer;
+  display: block;
+  height: 28px;
+  max-width: 400px;
   outline: none;
+  width: 100%;
   z-index: 0;
 }

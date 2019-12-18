@@ -7,23 +7,29 @@
 }
 
 .header {
-  font-weight: normal;
-  font-size: 17px;
-  margin-left: 1.1rem;
   color: #8d8d8d;
+  font-size: 17px;
+  font-weight: normal;
+  margin-left: 1.1rem;
 }
 
 .artist-row {
-  width: 100%;
-  display: flex;
   align-items: center;
+  background-color: #fff;
   border-bottom: 1px solid #e3e9e8;
-  padding: 0.3rem 0.5rem;
-  height: 4rem;
+  color: #000;
+  display: flex;
   font-size: 1.1rem;
-  background-color: white;
-  text-Decoration: none;
-  color: black;
+  height: 4rem;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  width: calc(100% - 1rem);
+}
+
+@media (max-width: 490px) {
+  .artist-row span {
+    display: none;
+  }
 }
 
 .active-artist-row {
@@ -33,34 +39,33 @@
 }
 
 .artist-avatar {
-  height: 3rem;
-  width: 3rem;
-  margin: 0 0.6rem;
-  border-radius: 50%;
   background-size: cover;
+  border-radius: 50%;
+  height: 3rem;
+  margin: 0 0.6rem;
+  width: 3rem;
 }
 
 .spotlight {
-  padding-top: 105px;
+  background-image: linear-gradient(288deg, rgb(235, 244, 244) 50%, rgb(251, 253, 253) 45%, rgb(255, 255, 255) 85%, rgb(255, 255, 255) 100%);
   box-sizing: border-box;
   height: 400px;
-  width: 460px;
   margin-left: auto;
-  background-image:
-    "linear-gradient(288deg, rgb(235, 244, 244) 50%, rgb(251, 253, 253) 45%, rgb(255, 255, 255) 85%, rgb(255, 255, 255) 100%)";
+  padding-top: 105px;
+  width: 460px;
 }
 
 .spotlight-img {
-  height: 9rem;
-  width: 9rem;
-  margin: auto;
-  border-radius: 50%;
   background-size: cover;
+  border-radius: 50%;
+  height: 9rem;
+  margin: auto;
+  width: 9rem;
 }
 
 .spotlight-label {
-  font-weight: bold;
-  text-align: center;
-  margin: 20px 0;
   font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
 }

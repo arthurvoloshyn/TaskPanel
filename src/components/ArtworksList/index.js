@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router";
+import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
 class ArtworksList extends Component {
   render() {
@@ -18,39 +19,32 @@ class ArtworksList extends Component {
   }
 
   renderArtworkList = () => {
-    return this.props.artworks.map(artwork => {
-      const { _id, title } = artwork;
+    const { artworks } = this.props;
 
-      return (
-        <NavLink
-          key={_id}
-          to={`/artworks/${_id}`}
-          className={styles['artwork-row']}
-          activeClassName={styles['active-artwork-row']}
-        >
-          <div
-            className={styles['artwork-avatar']}
-            style={{
-              backgroundImage: `url(imgs/artworks/${_id}.jpg)`
-            }}
-          />
-          <span>{`${title}`}</span>
-        </NavLink>
-      );
-    });
-  }
+    return artworks.map(({ _id, title }) => (
+      <NavLink key={_id} to={`/artworks/${_id}`} className={styles['artwork-row']} activeClassName={styles['active-artwork-row']}>
+        <div
+          className={styles['artwork-avatar']}
+          style={{
+            backgroundImage: `url(imgs/artworks/${_id}.jpg)`
+          }}
+        />
+        <span>{`${title}`}</span>
+      </NavLink>
+    ));
+  };
 
   renderSpotLight = () => {
-    const { match: { params }, artworks } = this.props;
+    const {
+      match: { params },
+      artworks
+    } = this.props;
     const selectedArtworkId = params && params.artworkId;
     if (!selectedArtworkId) {
       return null;
     }
-    const artworkInSpotlight = artworks.find(
-      artwork => artwork._id === selectedArtworkId
-    );
+    const artworkInSpotlight = artworks.find(({ _id }) => _id === selectedArtworkId);
     const { title, _id } = artworkInSpotlight;
-    const label = `${title}`;
     const imgUrl = `imgs/artworks/${_id}.jpg`;
 
     return (
@@ -61,10 +55,24 @@ class ArtworksList extends Component {
             backgroundImage: `url(${imgUrl})`
           }}
         />
-        <div className={styles['spotlight-label']}>{label}</div>
+        <div className={styles['spotlight-label']}>{title}</div>
       </div>
     );
-  }
+  };
 }
+
+ArtworksList.propTypes = {
+  artworks: PropTypes.array,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      artworkId: PropTypes.string
+    })
+  })
+};
+
+ArtworksList.defaultProps = {
+  artworks: [],
+  match: null
+};
 
 export default withRouter(ArtworksList);

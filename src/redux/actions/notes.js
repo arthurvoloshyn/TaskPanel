@@ -1,4 +1,4 @@
-export const ADD_NOTE = "ADD_NOTE";
+export const ADD_NOTE = 'ADD_NOTE';
 
 export const addNote = (text, afterIndex) => {
   return {
@@ -6,4 +6,4 @@ export const addNote = (text, afterIndex) => {
     text,
     afterIndex
   };
-}
+};

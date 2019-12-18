@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import NavBar from "../../NavBar";
-import NotesList from "../../NotesList";
+import NavBar from '../../NavBar';
+import NotesList from '../../NotesList';
 
-export default () => (
+const Notes = () => (
   <div>
     <NavBar />
     <NotesList />
   </div>
 );
+
+export default Notes;

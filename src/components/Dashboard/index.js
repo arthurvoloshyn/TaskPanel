@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router";
+import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
 class Dashboard extends Component {
   render() {
@@ -18,37 +19,31 @@ class Dashboard extends Component {
   }
 
   renderArtistList = () => {
-    return this.props.artists.map(artist => {
-      const { _id, firstName, lastName } = artist;
+    const { artists } = this.props;
 
-      return (
-        <NavLink
-          key={_id}
-          to={`/artists/${_id}`}
-          className={styles['artist-row']}
-          activeClassName={styles['active-artist-row']}
-        >
-          <div
-            className={styles['artist-avatar']}
-            style={{
-              backgroundImage: `url(imgs/artists/${_id}.png)`
-            }}
-          />
-          <span>{`${firstName} ${lastName}`}</span>
-        </NavLink>
-      );
-    });
-  }
+    return artists.map(({ _id, firstName, lastName }) => (
+      <NavLink key={_id} to={`/artists/${_id}`} className={styles['artist-row']} activeClassName={styles['active-artist-row']}>
+        <div
+          className={styles['artist-avatar']}
+          style={{
+            backgroundImage: `url(imgs/artists/${_id}.png)`
+          }}
+        />
+        <span>{`${firstName} ${lastName}`}</span>
+      </NavLink>
+    ));
+  };
 
   renderSpotLight = () => {
-    const { match: { params }, artists } = this.props;
+    const {
+      match: { params },
+      artists
+    } = this.props;
     const selectedArtistId = params && params.artistId;
     if (!selectedArtistId) {
       return null;
     }
-    const artistInSpotlight = artists.find(
-      artist => artist._id === selectedArtistId
-    );
+    const artistInSpotlight = artists.find(({ _id }) => _id === selectedArtistId);
     const { firstName, lastName, _id } = artistInSpotlight;
     const label = `${firstName} ${lastName}`;
 
@@ -65,7 +60,21 @@ class Dashboard extends Component {
         <div className={styles['spotlight-label']}>{label}</div>
       </div>
     );
-  }
+  };
 }
+
+Dashboard.propTypes = {
+  artists: PropTypes.array,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      artistId: PropTypes.string
+    })
+  })
+};
+
+Dashboard.defaultProps = {
+  artists: [],
+  match: null
+};
 
 export default withRouter(Dashboard);
