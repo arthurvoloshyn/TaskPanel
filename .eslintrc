@@ -236,6 +236,8 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
 
-    "jest/expect-expect": 0
+    "jest/expect-expect": 0,
+
+    "prettier/prettier": "error"
   }
 }
