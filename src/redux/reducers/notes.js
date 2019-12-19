@@ -10,7 +10,7 @@ if (!initState || !initState.notes || !initState.notes.length) {
   };
 }
 
-export default (state = initState.notes, { type, afterIndex, text }) => {
+const notes = (state = initState.notes, { type, afterIndex, text }) => {
   switch (type) {
     case ADD_NOTE:
       return [...state.slice(0, afterIndex + 2), text, ...state.slice(afterIndex + 2)];
@@ -18,3 +18,5 @@ export default (state = initState.notes, { type, afterIndex, text }) => {
       return state;
   }
 };
+
+export default notes;

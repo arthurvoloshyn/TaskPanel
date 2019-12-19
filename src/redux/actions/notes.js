@@ -1,9 +1,7 @@
 export const ADD_NOTE = 'ADD_NOTE';
 
-export const addNote = (text, afterIndex) => {
-  return {
-    type: ADD_NOTE,
-    text,
-    afterIndex
-  };
-};
+export const addNote = (text, afterIndex) => ({
+  type: ADD_NOTE,
+  text,
+  afterIndex
+});
