@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router';
-import { NavLink } from 'react-router-dom';
+
+import RenderLink from './RenderLink';
 
 import styles from './styles.module.css';
 
-class NavBar extends Component {
-  render() {
-    const pages = ['notes', 'artists', 'artworks'];
+const pages = ['notes', 'artists', 'artworks'];
 
-    return <div className={styles['nav-bar']}>{pages.map(this._renderLink)}</div>;
-  }
-
-  _renderLink = (page, i = -1) => (
-    <NavLink key={i} className={styles['link']} activeClassName={styles['active-link']} to={`/${page}`}>
-      {page}
-    </NavLink>
-  );
-}
+const NavBar = () => (
+  <div className={styles['nav-bar']}>
+    {pages.map((page, i) => (
+      <RenderLink key={i} page={page} />
+    ))}
+  </div>
+);
 
 export default withRouter(NavBar);
