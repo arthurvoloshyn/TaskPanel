@@ -4,25 +4,26 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.css';
 
-const RenderArtworkList = ({ artworks }) =>
-  artworks.map(({ _id, title }) => (
-    <NavLink key={_id} to={`/artworks/${_id}`} className={styles['artwork-row']} activeClassName={styles['active-artwork-row']}>
-      <div
-        className={styles['artwork-avatar']}
-        style={{
-          backgroundImage: `url(imgs/artworks/${_id}.jpg)`
-        }}
-      />
-      <span>{`${title}`}</span>
-    </NavLink>
-  ));
+const RenderArtworkList = ({ _id, title }) => (
+  <NavLink to={`/artworks/${_id}`} className={styles['artwork-row']} activeClassName={styles['active-artwork-row']}>
+    <div
+      className={styles['artwork-avatar']}
+      style={{
+        backgroundImage: `url(imgs/artworks/${_id}.jpg)`
+      }}
+    />
+    <span>{`${title}`}</span>
+  </NavLink>
+);
 
 RenderArtworkList.propTypes = {
-  artworks: PropTypes.array
+  _id: PropTypes.string,
+  title: PropTypes.string
 };
 
 RenderArtworkList.defaultProps = {
-  artworks: []
+  _id: '1',
+  title: ''
 };
 
 export default RenderArtworkList;

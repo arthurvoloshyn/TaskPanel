@@ -11,7 +11,9 @@ const ArtworksList = ({ artworks, match: { params } }) => (
   <div className={styles['artwork-list']}>
     <div>
       <h3 className={styles['header']}>Artworks</h3>
-      <RenderArtworkList artworks={artworks} />
+      {artworks.map(({ _id, title }) => (
+        <RenderArtworkList key={_id} _id={_id} title={title} />
+      ))}
     </div>
     <RenderSpotLight params={params} artworks={artworks} />
   </div>

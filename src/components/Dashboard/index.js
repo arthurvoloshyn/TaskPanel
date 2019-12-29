@@ -11,7 +11,9 @@ const Dashboard = ({ artists, match: { params } }) => (
   <div className={styles['dashboard']}>
     <div>
       <h3 className={styles['header']}>Artists</h3>
-      <RenderArtistList artists={artists} />
+      {artists.map(({ _id, firstName, lastName }) => (
+        <RenderArtistList key={_id} _id={_id} firstName={firstName} lastName={lastName} />
+      ))}
     </div>
     <RenderSpotLight params={params} artists={artists} />
   </div>

@@ -4,25 +4,28 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.css';
 
-const RenderArtistList = ({ artists }) =>
-  artists.map(({ _id, firstName, lastName }) => (
-    <NavLink key={_id} to={`/artists/${_id}`} className={styles['artist-row']} activeClassName={styles['active-artist-row']}>
-      <div
-        className={styles['artist-avatar']}
-        style={{
-          backgroundImage: `url(imgs/artists/${_id}.png)`
-        }}
-      />
-      <span>{`${firstName} ${lastName}`}</span>
-    </NavLink>
-  ));
+const RenderArtistList = ({ _id, firstName, lastName }) => (
+  <NavLink key={_id} to={`/artists/${_id}`} className={styles['artist-row']} activeClassName={styles['active-artist-row']}>
+    <div
+      className={styles['artist-avatar']}
+      style={{
+        backgroundImage: `url(imgs/artists/${_id}.png)`
+      }}
+    />
+    <span>{`${firstName} ${lastName}`}</span>
+  </NavLink>
+);
 
 RenderArtistList.propTypes = {
-  artists: PropTypes.array
+  _id: PropTypes.string,
+  firstName: PropTypes.string,
+  lastName: PropTypes.string
 };
 
 RenderArtistList.defaultProps = {
-  artists: []
+  _id: '1',
+  firstName: '',
+  lastName: ''
 };
 
 export default RenderArtistList;
