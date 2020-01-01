@@ -23,7 +23,7 @@ RenderArtistList.propTypes = {
 };
 
 RenderArtistList.defaultProps = {
-  _id: '1',
+  _id: '',
   firstName: '',
   lastName: ''
 };

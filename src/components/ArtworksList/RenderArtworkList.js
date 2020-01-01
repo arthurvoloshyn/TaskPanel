@@ -22,7 +22,7 @@ RenderArtworkList.propTypes = {
 };
 
 RenderArtworkList.defaultProps = {
-  _id: '1',
+  _id: '',
   title: ''
 };
 
